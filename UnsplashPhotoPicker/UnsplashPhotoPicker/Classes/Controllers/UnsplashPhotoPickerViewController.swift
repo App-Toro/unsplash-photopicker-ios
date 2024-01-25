@@ -66,7 +66,7 @@ class UnsplashPhotoPickerViewController: UIViewController {
             spinner.hidesWhenStopped = true
             return spinner
         } else {
-            let spinner = UIActivityIndicatorView(style: .gray)
+            let spinner = UIActivityIndicatorView(style: .large)
             spinner.translatesAutoresizingMaskIntoConstraints = false
             spinner.hidesWhenStopped = true
             return spinner
