@@ -14,3 +14,7 @@
 "error.noInternetConnection.description" = "You must connect to a Wi-Fi or cellular data network to access Unsplash.";
 "error.serverError.title" = "Server error";
 "error.serverError.description" = "Oops! Something's wrong. Please try again.";
+
+"title.zero" = "Unsplash";
+"title.one" = "%d photo selected";
+"title.other" = "%d photos selected";

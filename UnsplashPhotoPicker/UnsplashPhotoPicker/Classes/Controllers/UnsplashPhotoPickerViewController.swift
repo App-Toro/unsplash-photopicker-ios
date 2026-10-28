@@ -219,7 +219,13 @@ class UnsplashPhotoPickerViewController: UIViewController {
     }
 
     func updateTitle() {
-        title = String.localizedStringWithFormat("title".localized(), numberOfSelectedPhotos)
+        // Plain .strings keys instead of a .stringsdict plural: Tuist drops .stringsdict from package resources,
+        // which left the raw key "title" as the navigation title.
+        switch numberOfSelectedPhotos {
+        case 0: title = "title.zero".localized()
+        case 1: title = String(format: "title.one".localized(), numberOfSelectedPhotos)
+        default: title = String(format: "title.other".localized(), numberOfSelectedPhotos)
+        }
     }
 
     func updateDoneButtonState() {
